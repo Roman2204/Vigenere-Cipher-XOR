@@ -34,7 +34,7 @@ public class VigenereCipherXOR {
             'C', 'D', 'E', 'F'
     };
 
-    public static String convertByteArrayToHexString5( char[] CharArray ) throws UnsupportedEncodingException {
+    public static String convertCharArrayToHexString( char[] CharArray ) throws UnsupportedEncodingException {
         char[] HexChars = new char[2 * CharArray.length];
         int index = 0;
 
@@ -52,7 +52,7 @@ public class VigenereCipherXOR {
         String Key = new String(key);
         char[] Cipher_Text = VigenereCipherXOR.encryption(Plain_Text, Key);
         System.out.println( "Plain_Text:\t\t\t" + Plain_Text );
-        System.out.println( "Cipher_Text (in hex format):\t" + VigenereCipherXOR.convertByteArrayToHexString5(Cipher_Text) );
+        System.out.println( "Cipher_Text (in hex format):\t" + VigenereCipherXOR.convertCharArrayToHexString(Cipher_Text) );
         String Decryption_Text = VigenereCipherXOR.decryption(Cipher_Text, Key);
         System.out.println( "Decryption_Text:\t" + Decryption_Text );
 
